@@ -56,10 +56,10 @@ void setup() {
     pinMode(segPins[i], OUTPUT);
   }
 
-  // ตั้งค่าปุ่มกดเป็น INPUT_PULLUP
-  pinMode(SW1, INPUT_PULLUP);
-  pinMode(SW2, INPUT_PULLUP);
-  pinMode(SW3, INPUT_PULLUP);
+  // ตั้งค่าปุ่มกดเป็น INPUT
+  pinMode(SW1, INPUT);
+  pinMode(SW2, INPUT);
+  pinMode(SW3, INPUT);
 
   // เริ่มต้นแสดงเลข 0
   showNumber(currentNum);

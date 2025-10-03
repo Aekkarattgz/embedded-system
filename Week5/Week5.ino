@@ -56,10 +56,11 @@ void showNumberLEDs(int num) {
 
 void showNumberI2C(int num) {
   // แสดงบน 7-segment I2C HT16K33
-  matrix.clear();
-  matrix.print(num);
-  matrix.writeDisplay();
+  matrix.clear();       // ล้างหน้าจอ (เคลียร์การแสดงผลเดิมออก)
+  matrix.print(num);    // พิมพ์ค่าตัวเลข num ลงใน buffer ของ HT16K33
+  matrix.writeDisplay();// สั่งให้ชิป HT16K33 ส่งค่าไปยัง 7-Segment จริง
 }
+
 
 // ---------------- setup ----------------
 void setup() {
@@ -73,10 +74,10 @@ void setup() {
     pinMode(segPins[i], OUTPUT);
   }
 
-  // ตั้งค่าปุ่มกดเป็น INPUT_PULLUP
-  pinMode(SW1, INPUT_PULLUP);
-  pinMode(SW2, INPUT_PULLUP);
-  pinMode(SW3, INPUT_PULLUP);
+  // ตั้งค่าปุ่มกดเป็น INPUT
+  pinMode(SW1, INPUT);
+  pinMode(SW2, INPUT);
+  pinMode(SW3, INPUT);
 
   // เริ่มต้นแสดงเลข 0
   showNumber(currentNum);
