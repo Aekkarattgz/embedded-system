@@ -2,6 +2,7 @@
 int leds[NUM_LEDS] = {32, 33, 25, 26, 27, 12, 13};
 
 void setup() {
+  Serial.begin(115200);  
   // ตั้งค่า pinMode ทุกตัวใน array
   for (int i = 0; i < NUM_LEDS; i++) {
     pinMode(leds[i], OUTPUT);

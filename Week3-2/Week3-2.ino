@@ -36,6 +36,7 @@ void showNumberLEDs(int num) {
 }
 
 void setup() {
+  Serial.begin(115200);  
   // ตั้งค่า LED 7 หลอดเป็น OUTPUT
   for (int i = 0; i < NUM_LEDS; i++) {
     pinMode(leds[i], OUTPUT);

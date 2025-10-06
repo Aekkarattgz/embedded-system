@@ -34,6 +34,7 @@ void showNumber(int num) {
 }
 
 void setup() {
+  Serial.begin(115200);  
   // ตั้งค่า GPIO ทุกตัวเป็น OUTPUT
   for (int i = 0; i < 7; i++) {
     pinMode(segPins[i], OUTPUT);

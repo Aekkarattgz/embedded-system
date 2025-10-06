@@ -6,6 +6,7 @@
 #define LED6 12 
 #define LED7 13
 void setup() {
+  Serial.begin(115200);  
   pinMode(LED1, OUTPUT);
   pinMode(LED2, OUTPUT);
   pinMode(LED3, OUTPUT);
