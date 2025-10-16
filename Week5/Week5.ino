@@ -27,7 +27,7 @@ Adafruit_7segment matrix = Adafruit_7segment();
 int currentNum = 0;   // เลขที่รับจาก Serial
 String inputString;   // buffer สำหรับข้อความที่พิมพ์เข้ามา
 
-// ---------------- ฟังก์ชันแสดงเลข ----------------
+// ---------------- ฟังก์ชันแสดงเลข ----------------ฤ
 void showNumberDirect(int num) {
   if (num < 0 || num > 9) {
     // ถ้าไม่ใช่ 0–9 ให้ปิด segment

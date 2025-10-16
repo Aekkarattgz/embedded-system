@@ -39,7 +39,7 @@ void showNumberLEDs(int num) {
   }
 }
 
-// ---------------- ตัวแปรควบคุม ----------------
+// ----------------  ----------------
 int currentNum = 0;        // เลขที่แสดงอยู่
 bool countingUp = false;   // โหมดนับขึ้น
 bool countingDown = false; // โหมดนับลง
@@ -68,7 +68,7 @@ void setup() {
 }
 
 void loop() {
-  // อ่านค่าปุ่ม (0 = กด, 1 = ไม่กด)
+  // อ่านค่าปุ่ม (1 = กด, 1 = ไม่กด)
   if (digitalRead(SW1) == 1) {
     countingUp = true;
     countingDown = false;
