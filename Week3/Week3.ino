@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
                 // a, b, c, d, e, f, g
+=======
+// a, b, c, d, e, f, g
+>>>>>>> 251ad9b3c3a277b805574e721e562abb1a8666bc
 int segPins[7] = {4, 16, 17, 5, 18, 19, 21};
 // กำหนดตำแหน่งขาของ Segment a–g ที่ต่อกับ ESP32
 // a → GPIO 4
@@ -10,7 +14,7 @@ int segPins[7] = {4, 16, 17, 5, 18, 19, 21};
 // f → GPIO 19
 // g → GPIO 21
 byte numberPatterns[10][7] = {
-  // a, b, c, d, e, f, g
+// a, b, c, d, e, f, g
   {1, 1, 1, 1, 1, 1, 0}, // 0 เปิด a b c d e f
   {0, 1, 1, 0, 0, 0, 0}, // 1 เปิด b c
   {1, 1, 0, 1, 1, 0, 1}, // 2 เปิด a b d e g
