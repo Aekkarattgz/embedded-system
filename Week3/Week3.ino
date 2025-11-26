@@ -1,5 +1,5 @@
 
-// a, b, c, d, e, f, g
+                // a, b, c, d, e, f, g
 int segPins[7] = {4, 16, 17, 5, 18, 19, 21};
 // กำหนดตำแหน่งขาของ Segment a–g ที่ต่อกับ ESP32
 // a → GPIO 4
