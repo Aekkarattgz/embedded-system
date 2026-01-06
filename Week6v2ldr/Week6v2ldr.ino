@@ -16,7 +16,11 @@ void setup() {
 
 void loop() {
   delay(2000);
-  int val = analogRead(LDR);
+  int ldrraw = analogRead(LDR); //แรงดันไฟฟ้าจากขา Analog ที่ต่อกับ LDR
+  int lightPercent = map(ldrraw, 0, 4095, 0, 100); 
+                   //map(ค่า, ค่าต่ำสุดที่วัดได้, ค่าสูงสุดที่วัดได้, ค่าต่ำสุดหลังแปลง, ค่าสูงสุดหลังแปลง)
+  lightPercent = constrain(lightPercent, 0, 100); //จำกัดค่าไม่ให้เกินช่วงที่กำหนด
+
   float h = dht.readHumidity();
   float t = dht.readTemperature();
   float f = dht.readTemperature(true);
@@ -40,6 +44,6 @@ void loop() {
   Serial.print(F(" C "));
   Serial.print(hif);
   Serial.println(F(" F")); 
-  Serial.println(val);
+  Serial.println(lightPercent);
 
 }
